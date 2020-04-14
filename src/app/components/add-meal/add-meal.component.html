@@ -1,0 +1,27 @@
+<form class="container" [formGroup]="mealForm" (ngSubmit)="onFormSubmit()">
+    <h1>Add Meals Here</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <input formControlName="mealName" matInput type="text" matInput placeholder="Meal Name" />
+        </div>
+        <div class="col-sm-6">
+            <input formControlName="mealDescription" required matInput type="text" matInput placeholder="Meal Description" />
+        </div>
+        <div class="col-sm-6">
+            <input formControlName="mealCatagory" required matInput type="text" matInput placeholder="Meal Catagory" />
+        </div>
+        <div class="col-sm-6">
+            <input formControlName="unitPrice" required matInput type="text" matInput placeholder="Unit Price" />
+        </div>
+        <div class="col-sm-6">
+            <input formControlName="totalQuantity" required matInput type="text" matInput placeholder="Total Quantity" />
+        </div>
+        <div class="col-sm-6">
+        <input formControlName="active"  type="checkbox" >Is Avaliable<br>
+    </div>
+        
+    </div>
+    <button type="submit">Submit</button>
+
+
+</form>

@@ -1,0 +1,33 @@
+<h1>Order Delevery Time duration</h1>
+<form class="container" [formGroup]="deleveryTimeForm" (ngSubmit)="onFormSubmit()">
+    <div class="row">
+        <div class="col-sm-6">
+            <input formControlName="date" matInput type="text" matInput placeholder="yyyy-MM-dd" />
+        </div>
+     
+        
+    </div>
+    <button type="submit">Submit</button>
+
+
+</form>
+<table class="table table-striped table-bordered table-sm row-border hover">
+    <thead>
+      <tr>
+        <th>Order Description</th>
+        <th>Order Status</th>
+        <th>Order Recieved Time</th>
+        <th>Order Delivered Time</th>
+        <th>Order Amount price</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let group of datas">
+           <td>{{group.orderDescription}}</td>
+           <td>{{group.orderStatus}}</td>
+           <td>{{group.orderRecivedTime}}</td>
+           <td>{{group.orderDeliveredTime}}</td>
+           <td>{{group.orderAmmount}}</td>  
+       </tr>
+    </tbody>
+  </table>
